@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support — Offline AI Accountant</title>
+<meta name="description" content="Help for Offline AI Accountant: importing statements, scanning receipts, categorisation, invoices, exports and troubleshooting.">
+<style>
+  :root{
+    --bg:#FFFFFF; --surface:#F6F8F7; --stroke:#E4E9E7;
+    --text:#101614; --text2:#56635F; --text3:#8A9490;
+    --accent:#0E7C66; --accent2:#0F9A7A;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0B0F0E; --surface:#141A18; --stroke:#242D2A;
+      --text:#F2F5F4; --text2:#9AA6A2; --text3:#6B7773;
+      --accent:#2DD4A7; --accent2:#5EEAD4;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:56px 20px 96px}
+  .mark{font-weight:800;font-size:15px;letter-spacing:-.2px}
+  .mark span{background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:34px;line-height:1.15;letter-spacing:-.8px;margin:26px 0 10px}
+  h2{font-size:20px;letter-spacing:-.3px;margin:40px 0 6px}
+  h3{font-size:16px;margin:22px 0 4px}
+  p,li{color:var(--text2)}
+  .lede{font-size:18px;color:var(--text)}
+  .card{background:var(--surface);border:1px solid var(--stroke);border-radius:16px;
+    padding:18px 20px;margin:20px 0}
+  .card h3{margin-top:0}
+  ul{padding-left:20px}
+  li{margin:6px 0}
+  code{background:var(--surface);border:1px solid var(--stroke);border-radius:6px;
+    padding:1px 6px;font-size:14px}
+  .foot{margin-top:56px;padding-top:22px;border-top:1px solid var(--stroke);
+    color:var(--text3);font-size:13.5px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">Offline <span>AI Accountant</span></div>
+
+  <h1>Support</h1>
+  <p class="lede">Everything runs on your phone, so most problems are solvable
+  right there. Start here; if it isn't covered, email
+  <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a> and include what you were
+  doing and what happened.</p>
+
+  <h2>Getting started</h2>
+
+  <h3>Import your first statement</h3>
+  <p>Export a statement from your bank as CSV, OFX/QFX or QIF, save it to Files or
+  iCloud Drive, then in the app: <strong>+ → Import a statement</strong>. Choose the
+  account it belongs to. Nothing is written to your books until you have seen the
+  preview, and the app tells you which rows it thinks are already on record.</p>
+  <p>If the columns are read wrongly, fix them on the preview screen — the picker
+  lists your file's own headers.</p>
+
+  <h3>Scan a receipt</h3>
+  <p><strong>+ → Scan a receipt</strong>. The app reads the merchant, date, total and
+  tax, and shows how confident it is about each one and where it read it from.
+  If the charge is already in your books it offers to attach the receipt to it
+  rather than creating a duplicate.</p>
+
+  <h2>Categorisation</h2>
+
+  <div class="card">
+    <h3>Why did it pick that category?</h3>
+    <p style="margin-bottom:0">Open the transaction. The card under "Category" says exactly
+    what decided it — a rule, your own history, a category keyword, or the
+    on-device model — how confident it was, what else it considered, and which of
+    your past entries it leaned on.</p>
+  </div>
+
+  <h3>It keeps getting a merchant wrong</h3>
+  <p>Correct it once, then use <strong>"Always file … here"</strong> on the transaction.
+  That writes a rule, and rules run before the model and are never overridden by
+  it. You can also add a word to a category's keyword list in
+  <strong>More → Categories</strong>, which steers everything containing that word.</p>
+
+  <h3>Too much is landing in Review / too little</h3>
+  <p><strong>More → Settings → How much to decide for you.</strong> The first slider is the
+  bar the app has to clear to file something without asking; the second is the
+  point below which it stops offering a suggestion at all. Lower the first for
+  less reviewing and more mistakes; raise it for the reverse.</p>
+
+  <h3>Categorising is slow</h3>
+  <p>The first run after a large import does the most work, because there is no
+  history to learn from yet. It gets much faster as your books fill up: repeat
+  merchants are matched without the model at all. You can leave the screen while
+  it runs, and cancel it at any time.</p>
+
+  <h2>Invoices</h2>
+  <p>Numbering, prefix and payment terms live in <strong>More → Your business</strong>.
+  Each invoice can produce a PDF to send and a UBL 2.1 XML e-invoice file for
+  portals that want one. Recording a payment can also post the deposit to a bank
+  account, which keeps your balances and your invoices in step.</p>
+  <p>The app produces the file; submitting it to a tax authority is done by you,
+  through their portal.</p>
+
+  <h2>Your data</h2>
+
+  <h3>Back up, restore, move to a new phone</h3>
+  <p><strong>More → Export everything → Complete backup (JSON)</strong> gives you a file
+  that restores everything exactly, including settings for each record. On the new
+  phone, install the app and use <strong>Export → Restore from a backup file</strong>.
+  The ZIP export additionally contains every receipt image and invoice PDF.</p>
+
+  <h3>I imported the same statement twice</h3>
+  <p><strong>More → Imports</strong> lists every file you have imported, with an
+  <strong>Undo</strong> that removes exactly the transactions that came in with it.</p>
+
+  <h3>A balance looks wrong</h3>
+  <p>Check <strong>More → Accounts</strong>. If a statement stated a closing balance that
+  no longer agrees with the entries on record, the app says so and by how much —
+  usually a missing statement or a duplicated row.</p>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>The app is large.</strong> The AI model ships inside it (about 800 MB) so
+      it works with no connection and no download on first launch.</li>
+    <li><strong>Receipt text came out garbled.</strong> Re-scan with the receipt flat and
+      evenly lit; the scanner corrects perspective but cannot recover a fold across
+      the total. You can always correct any field by hand.</li>
+    <li><strong>"The on-device model is still loading."</strong> Give it a few seconds
+      after launch. If it persists, restart the app; the model file is verified
+      at load.</li>
+    <li><strong>Nothing happens when I ask a question.</strong> Ask works on your own
+      ledger only — it cannot answer general questions. Try "how much did I spend
+      on software this year".</li>
+  </ul>
+
+  <h2>What this app is not</h2>
+  <p>It helps you keep books. It is not an accountant, it does not file returns,
+  and its tax summary is a calculation from the tax codes you assigned — check it
+  against your own return before submitting anything.</p>
+
+  <div class="foot">
+    Offline AI Accountant · <a href="privacy.html">Privacy policy</a> ·
+    <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a>
+  </div>
+</div>
+</body>
+</html>
